@@ -1,7 +1,7 @@
 /* Horizontal NavBar */
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-size: 110%;
     font-family: 'Open Sans', sans-serif;   
 }
@@ -16,16 +16,20 @@ li {
 /* Adding NavBar Background */
 
 .main-nav {
-    background: #58490f;
+    background: linear-gradient(to right, #0000cc 0%, #ffff66 100%);
     text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    opacity: 0.6;
+    opacity: 0.8;
     z-index: 9999;
     margin: -10%;
+    z-index: 1000;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    transition: box-shadow 0.5s;
 }
+
 
 /* Setting Hover States */
 
@@ -135,3 +139,27 @@ body {
 }
 
 
+/* about background */
+
+.fixed-bg {
+
+    /* The background image */
+/*    background-image: url("https://www.instagram.com/p/BZyqD17j1CSDKg651gOuQQ8ucWib99GxSp8tWg0/?taken-by=lordcarr_");  */
+    /* Set a specified height, or the minimum height for the background image */
+    min-height: 100%;
+    width:100%;
+ 
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: scroll;
+    /* Center the background image */
+/*     background-position: center; */
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+}
+
+.hide{
+	display: none;
+	visibility: hidden;
+}

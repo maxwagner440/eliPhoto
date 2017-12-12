@@ -35,50 +35,66 @@
     
 </div>
 
-          <!--arrow button-->
-          
-          <!-- <svg version="1.1" id="favorite" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 151.8 75" style="enable-background:new 0 0 151.8 75;" xml:space="preserve">
-     <style type="text/css">
-         #favorite__icon{fill:#E54C3B;visibility:hidden;}
-     #favorite__rect{fill:#E54C3B;}
-         #favorite__text{fill:#FFFFFF;font-size:20px;}
-     </style>
-     <path id="favorite__icon" d="M76.2,75c41.1-34.6,43.8-50.3,38.8-62.2C107.3-4.9,82.7-3,75.8,10.9C68.9-3,43.9-4.9,36.6,12.8
-         C32,25.1,34.7,40.8,76.2,75z"/>
-     <path id="favorite__rect" d="M149.8,62.5H2c-1.1,0-2-0.9-2-2v-46c0-1.1,0.9-2,2-2h147.8c1.1,0,2,0.9,2,2v46
-         C151.8,61.6,150.9,62.5,149.8,62.5z"/>
-     <text id="favorite__text" transform="matrix(1 0 0 1 39.9578 41.26)">Favorite</text>
-     </svg>
-     
-     <svg version="1.1" id="print" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 151.8 75" style="enable-background:new 0 0 151.8 75;" xml:space="preserve">
-     <style type="text/css">
-         #print__icon{fill:#9b59b6;visibility:hidden;}
-         #print__rect{fill:#9b59b6;}
-     #print__text{fill:#fff;font-size:20px;}
-     </style>
-     <path id="print__icon" d="M102.7,16.6V0H51.4v16.6H34.7v38.9h16.6V75h36.1l15.1-15.3l0,0v-4.2H117V16.6
-         C117,16.6,102.7,16.6,102.7,16.6z M97,5.7v10.9h-40V5.7H97z M102.7,39.2H97v16.3H81.5v14H57.1V39.2h-5.7v13.8h-4.9V33.7h61.5v19.2
-         H103L102.7,39.2L102.7,39.2z"/>
-     <path id="print__rect" d="M149.8,62.5H2c-1.1,0-2-0.9-2-2v-46c0-1.1,0.9-2,2-2h147.8c1.1,0,2,0.9,2,2v46
-         C151.8,61.6,150.9,62.5,149.8,62.5z"/>
-     <text id="print__text" transform="matrix(1 0 0 1 55.1375 41.26)">Print</text>
-     </svg>
-     
-     <svg version="1.1" id="download" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 151.8 75" style="enable-background:new 0 0 151.8 75;" xml:space="preserve">
-     <style type="text/css">
-     #download__icon{fill:#4FBA6E;visibility:hidden;}
-     #download__rect{fill:#4FBA6E;}
-     #download__text{fill:#fff;font-size:20px;}
-     </style>
-     <path id="download__icon" d="M65.2,0h21.4v37.5h26.8L75.9,75L38.4,37.5h26.8V0z"/>
-     <path id="download__rect" d="M149.8,62.5H2c-1.1,0-2-0.9-2-2v-46c0-1.1,0.9-2,2-2h147.8c1.1,0,2,0.9,2,2v46
-         C151.8,61.6,150.9,62.5,149.8,62.5z"/>
-     <text id="download__text" transform="matrix(1 0 0 1 30.6976 41.26)">Download</text>
-     </svg> -->
+<button id="btn">Click This</button>
             
+<div id="animal"></div>
+
+  <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+    
+        
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var lakewood = {lat: 42.4957, lng: -81.7970};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: lakewood
+        });
+        var marker = new google.maps.Marker({
+          position: lakewood,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pAOzVVhIn_mQulSCBO354ZtacSk_ve0&callback=initMap">
+    </script>
+
+
+
+
+
+<!-- // Install the client from NPM -->
+<script>
+
+// Require the client
+
+const Clarifai = require('clarifai');
+
+// initialize with your api key. This will also work in your browser via http://browserify.org/
+
+const app = new Clarifai.App({
+ apiKey: 'd5cd04aa2bf64eeab5199d4b2d0459c5'
+});
+
+var ourRequest = app.models.predict(Clarifai.GENERAL_MODEL, "https://samples.clarifai.com/metro-north.jpg").then(
+		  function(response) {
+		    console.log(ourRequest);
+		  },
+		  function(err) {
+		    // there was an error
+		  }
+		);
+</script>
+<!-- // You can also use the SDK by adding this script to your HTML: -->
+
+<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
             <footer></footer>
             </body>
             

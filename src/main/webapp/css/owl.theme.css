@@ -82,7 +82,7 @@ img.pic{
 	width: 249px;
 	height: 200px;
 	transition: all .2s ease-in-out;
-	border-color: #9a9274;
+	border-color: #000000;
 	border-style: solid;
 	
  
@@ -103,10 +103,10 @@ img.pic{
 	
 }
 
-.owl-border{
-	height: 200px;
-	width:273px;
-	border-right-style: solid;
-    border-right-width: 4px;
-    border-right-color: #9a9274;
-}
+/* .owl-border{ */
+/* 	height: 200px; */
+/* 	width:273px; */
+/* 	border-right-style: solid; */
+/*     border-right-width: 4px; */
+/*     border-right-color: #000000; */
+/* } */
