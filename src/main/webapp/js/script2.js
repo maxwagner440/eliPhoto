@@ -1,23 +1,20 @@
 var btn = document.getElementById("btn");
 var pageCounter = 1;
+var CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/des6rntql/image/upload';
+var CLOUDINARY_UPLOAD_PRESET = 'qopgfdve';
 
 $( document ).ready(function() {
 
 $("#btn").on('click', function(){
 	var ourRequest = new XMLHttpRequest();
-	ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-'+ pageCounter + '.json');
+	ourRequest.open('GET', CLOUDINARY_URL);
 	ourRequest.onload = function(){
 		var ourData = JSON.parse(ourRequest.responseText);
-		console.log(ourData[1]);
-		renderHTML(ourData);
+		console.log(ourData[0]);
+		
 	};
-	ourRequest.send();
-	pageCounter++;
-	if(pageCounter > 3){
-		$("#btn").addClass("hide")
-	}
-});
 
+});
 
 
 });
@@ -69,4 +66,7 @@ function main(params) {
 	  main(defaultParameters)
 	    .then((results) => console.log(JSON.stringify(results, null, 2)))
 	    .catch((error) => console.log(error.message));
-	 
+	
+	
+	
+	

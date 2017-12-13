@@ -2,7 +2,7 @@
 
 <%@include file ="/WEB-INF/jsp/common/header.jspf" %>
 
-<body background="img/eli1.jpg" class="fixed-bg">
+<body>
             
             <header>
             <div class="main-nav">
@@ -19,14 +19,17 @@
                         <li id="list6"><a href="#">FAQ</a></li>
                     </ul>
                 </nav>
+                </div>
                 </header>
-
-<c:url value="about" var="title"/>
-
-
-<h1 class="bio-font">Eli Carr</h1>
-<h2 class="bio-font">Some Stuff Here</h2>
-<h2 class="bio-font">Also Some Stuff Here</h2>
-<p class="bio-font-body">Bio: I once pooped my pants when I bent down to grind on my boyfriend
-</p>
-
+                
+<div class="msg-container"> <h2>Inquiries:</h2>
+                <c:forEach items="${messages}" var="message">
+                	<div>Name: <c:out value="${message.name }"/></div>
+                	<div>Date Sent: <c:out value="${message.getTrueDate() }"/></div>
+                	<div>Phone Number: <c:out value="${message.number }"/></div>
+                	<div>Email: <c:out value="${message.email }"/></div>
+                	<div>Message: <c:out value="${message.message }"/></div>
+                	
+                	<br>
+                </c:forEach>
+</div>
