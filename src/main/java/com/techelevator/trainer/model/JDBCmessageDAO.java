@@ -11,6 +11,7 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import com.techelevator.beans.Message;
+import com.techelevator.beans.Picture;
 
 
 
@@ -59,5 +60,43 @@ public class JDBCmessageDAO implements MessageDAO {
 		message.setMessage(result.getString("message"));
 		
 		return message;
+	}
+
+	@Override
+	public List<Picture> getAllPictures() {
+		List<Picture> allPics = new ArrayList<>();
+		String sqlStatement = "SELECT * FROM pictures";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlStatement);
+		while(result.next()) {
+			allPics.add(mapToPicture(result));
+		}
+		return allPics;
+	}
+
+	@Override
+	public Picture getPictureByPictureId(Long pictureId) {
+		Picture picture = new Picture();
+		String sqlStatement = "SELECT * FROM pictures WHERE picture_id = ?";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlStatement, pictureId);
+		while(result.next()) {
+		     picture = mapToPicture(result);
+		}
+		return picture;
+	}
+
+	@Override
+	public void savePicute(Picture picture) {
+		jdbcTemplate.update("INSERT INTO pictures (file_name, date, location, category, title)"
+				+ " VALUES (?, ?, ?, ?, ?)");
+	}
+	public Picture mapToPicture(SqlRowSet result) {
+		Picture picture = new Picture();
+		picture.setPictureId(result.getLong("picture_id"));
+		picture.setFileName(result.getString("file_name"));
+		picture.setDate(result.getDate("date").toLocalDate());
+		picture.setLocation(result.getString("location"));
+		picture.setCatergory(result.getString("category"));
+		picture.setTitle(result.getString("title"));
+		return picture;
 	}
 }

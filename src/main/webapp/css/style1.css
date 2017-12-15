@@ -67,10 +67,15 @@ body {
 
 /*Arrow*/
 
+.hidden {
+display: none !important;
+transition: all 1s;
+transition-timing-function: ease-in;
+}
 
 .center-con {
     display: flex;
-    height: 100vh;
+    height: 50vh;
     align-items: center;
     justify-content: center;
 }
@@ -252,3 +257,5 @@ textarea {
 	margin-top: 10%;
 	margin-left: 45%;
 }
+
+

@@ -29,6 +29,7 @@
                 <p></p>
             </section> 
             
+            
 
             <div id="owl-example" class="owl-carousel">
                
@@ -54,7 +55,7 @@
     </div>
     
 </div>
-
+<div id="texts" class=""></div>
 <button id="btn">Click This</button>
             
 <div id="animal"></div>

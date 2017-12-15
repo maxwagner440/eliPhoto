@@ -1,6 +1,6 @@
 window.onload = function() {
-  $("#owl-example").hide();
-  
+  $("#owl-example").slideUp("slow", "swing");
+  $("#texts").append("WHAT WAS THAT? Click the Arrow")
 };
 
 $( document ).ready(function() {
@@ -8,7 +8,7 @@ $( document ).ready(function() {
    
     $( ".display" ).click(function( event ) {
         $("#owl-example").slideToggle("slow", "swing");
-    
+        $("#texts").toggleClass("hidden");
            });
 
 
