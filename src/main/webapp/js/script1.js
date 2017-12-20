@@ -38,7 +38,9 @@ $( document ).ready(function() {
         $(this).removeClass('transition');
     });
 
-    
+$('.dropbtn').click(function(){
+	$('.dropdown').toggleClass('hidden2');
+})
      
 
 });

@@ -14,7 +14,8 @@
                         <li id="list2"><a href="${about }">About</a></li>
                         <c:url value="/contact" var="contact"/>
                         <li id="list3"><a href="${contact }">Contact</a></li>
-                        <li id="list4"><a href="#">Gallery</a></li>
+                        <c:url value="/gallery" var="gallery"/>
+                        <li id="list4"><a href="${gallery }">Gallery</a></li>
                         <li id="list5"><a href="#">Store</a></li>
                         <li id="list6"><a href="#">FAQ</a></li>
                     </ul>
