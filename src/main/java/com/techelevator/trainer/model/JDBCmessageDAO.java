@@ -99,4 +99,15 @@ public class JDBCmessageDAO implements MessageDAO {
 		picture.setTitle(result.getString("title"));
 		return picture;
 	}
+
+	@Override
+	public List<Picture> getPictureByCategory(String category) {
+		List<Picture> ourList = new ArrayList<>();
+		String sql = "SELECT * FROM pictures WHERE category = ?";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sql, category);
+		while(result.next()) {
+			ourList.add(mapToPicture(result));
+		}
+		return ourList;
+	}
 }

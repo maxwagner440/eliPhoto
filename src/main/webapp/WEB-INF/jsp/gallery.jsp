@@ -20,17 +20,7 @@
                         <li id="list3"><a href="${contact }">Contact</a></li>
                         
                         <c:url value="/gallery" var="gallery"/>
-                        <li id="list4" class='dropbtn'><button >Gallery</button></li>
-                        <div class="dropdown hidden2">
-									    <a href="#about">About</a>
-									    <a href="#base">Base</a>
-									    <a href="#blog">Blog</a>
-									    <a href="#contact">Contact</a>
-									    <a href="#custom">Custom</a>
-									    <a href="#support">Support</a>
-									    <a href="#tools">Tools</a>
-                        
-                        </div>
+                        <li id="list4" ><a href="${gallery }">Gallery</a></li>
                         
                         <li id="list5"><a href="#">Store</a></li>
                         <li id="list6"><a href="#">FAQ</a></li>
@@ -38,9 +28,17 @@
                 </nav>
                 </header>
 
+<br>
+<br>
+<br>
+		<c:url var="gallery" value="/gallery"/>
+		<form action="${gallery}" method="POST">
+		<input type="hidden" name="destination" value="${param.destination}"/>
+			<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
+		<input type="hidden" name="category" value="Nature"/>
+		<input type="submit" value="Action"/>
 	
-	
-	
+	</form>
 	<div class="wrapper">
 		<c:forEach items="${pictures}" var="picture">
 			<div>

@@ -13,6 +13,7 @@ public interface MessageDAO {
 	public List<Picture> getAllPictures();
 	public Picture getPictureByPictureId(Long pictureId);
 	public void savePicute(Picture picture);
+	public Object getPictureByCategory(String category);
 	
 
 }
