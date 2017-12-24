@@ -24,7 +24,9 @@ img.pic-gallery{
 }
 
 
-
+#submit-btn{
+	width: 100px; !important
+}
 
 
 .dropbtn {

@@ -1,6 +1,7 @@
 package com.techelevator.trainer.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,22 +24,22 @@ public class GalleryController {
 		this.messageDAO = messageDAO;
 	}
 	@RequestMapping(path="/gallery", method=RequestMethod.GET)
-	public String viewGallery(ModelMap modelHolder, HttpServletRequest request) {
+	public String viewGallery(ModelMap modelHolder, HttpSession session) {
 		String category = "";
-		if(request.getAttribute("category") == null) {
+		if(session.getAttribute("category") == null) {
 			category = "";
 		}
 		else {
-			category = (String) request.getAttribute("category");
+			category = (String) session.getAttribute("category");
 		}
 		modelHolder.addAttribute("pictures", messageDAO.getPictureByCategory(category));
 		return "gallery";
 	}
 	
 	@RequestMapping(path="/gallery", method=RequestMethod.POST)
-	public String chooseTypeOfGallery(RedirectAttributes attr, @RequestParam String category) {
+	public String chooseTypeOfGallery(HttpSession session, @RequestParam String category) {
 		
-		attr.addFlashAttribute("pictures", messageDAO.getPictureByCategory(category));
+		session.setAttribute("category", category);
 		return "redirect:/gallery";
 	}
 }

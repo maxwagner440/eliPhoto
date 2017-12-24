@@ -33,11 +33,14 @@
 <br>
 		<c:url var="gallery" value="/gallery"/>
 		<form action="${gallery}" method="POST">
-		<input type="hidden" name="destination" value="${param.destination}"/>
+			<input type="hidden" name="destination" value="${param.destination}"/>
 			<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
-		<input type="hidden" name="category" value="Nature"/>
-		<input type="submit" value="Action"/>
-	
+			<select name="category">
+			  <option value="Nature">Nature</option>
+			  <option value="Action">Action</option>
+			  <option value="People">People</option>
+			</select>
+			<input type="submit" id="submit-btn"/>
 	</form>
 	<div class="wrapper">
 		<c:forEach items="${pictures}" var="picture">
