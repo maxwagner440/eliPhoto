@@ -1,123 +1,549 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <%@include file ="/WEB-INF/jsp/common/header.jspf" %>
 
-<body>
-            
-            <header>
-            <div class="main-nav">
-                <nav>
-                    <ul>
-                    	<c:url value="/" var="home"/>
-                        <li id="list1"><a href="${home}">Home</a></li>
-                        <c:url value="/about" var="about"/>
-                        <li id="list2"><a href="${about }">About</a></li>
-                        <c:url value="/contact" var="contact"/>
-                        <li id="list3"><a href="${contact }">Contact</a></li>
-                        <c:url value="/gallery" var="gallery"/>
-                        <li id="list4"><a href="${gallery }">Gallery</a></li>
-                        <li id="list5"><a href="#">Store</a></li>
-                        <li id="list6"><a href="#">FAQ</a></li>
-                    </ul>
-                </nav>
-                </header>
 
-<c:url value="home" var="title"/>
-
-           
-            <section class="secondary-content">
-                <h2></h2>
-                <p></p>
-            </section> 
-            
-            
-
-            <div id="owl-example" class="owl-carousel">
-               
-              <div class="owl-border"> <a href="#"><img class="pic" src="img\african.jpg"></a></div>
-                <div class="owl-border"><a href="#"> <img class="pic" src="img\river.jpg"> </a></div>
-                <div class="owl-border"> <a href="#"><img class="pic" src="img\lightning.jpg"></a> </div>
-                 <div class="owl-border"><a href="#"><img class="pic" src="img\mountains.jpg"> </a></div>
-                <div class="owl-border"><a href="#"> <img class="pic" src="img\night_sky.jpg"> </a></div>
-                 <div class="owl-border"><a href="#"><img class="pic" src="img\rough_ocean.jpg"></a> </div>
-                 <div class="owl-border"><a href="#"><img class="pic" src="img\skateboard.jpg"></a> </div>
-              </div>
-            
-             
-
-
-<div class="center-con">
-    
-    <div id="arrow" class="round display">
-        <span class="span"></span>
-        <span class="span"></span>
-        <span class="span"></span>
-        <span class="span"></span>
-    </div>
-    
-</div>
-<div id="texts" class=""></div>
-<button id="btn">Click This</button>
-            
-<div id="animal"></div>
-
-  <style>
-       #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
-    
+<section class="featured">
+	<div id="index">
+			<!-- Responsive slider - START -->
+    	<div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+			<div class="slides" data-group="slides">
+				<ul>
+					<li>
+						<div class="slide-body" data-group="slide">
+							<img src="img/8.jpg" alt="">
+							<div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+								<h2>Hidden-Gem Massage</h2>
+								<div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><i class="fa fa-diamond fa-4x" aria-hidden="true"></i></div>
+								<br>
+								<div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3>Relax!</h3></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-body" data-group="slide">
+							<img src="img/2.jpg" alt="">
+							<div class="caption header" data-animate="slideAppearDownToUp" data-delay="500" data-length="300">
+								<h2>Hidden-Gem Massage</h2>
+								<div class="caption-sub" data-animate="slideAppearUpToDown" data-delay="800" data-length="300"><span><i class="fa fa-diamond fa-4x" aria-hidden="true"></i> </span></div>
+								<br>
+								<div class="caption-sub" data-animate="slideAppearRightToLeft" data-delay="1200" data-length="300"><h3>Recover!</h3></div>
+							</div>
+						</div>
+					</li>
+  	    		<li>
+              <div class="slide-body" data-group="slide">
+                <img src="img/6.jpg" alt="">
+                <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+                  <h2>Hidden-Gem Massage</h2>
+                  <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><i class="fa fa-diamond fa-4x" aria-hidden="true"></i></div>
+				  <br>
+				  <div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><h3><span>Rejuvinate!</span></h3></div>
+		
+				</div>
+                </div>
+  	    		</li>
+			
+  	    	</ul>
+		</div>
         
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var lakewood = {lat: 42.4957, lng: -81.7970};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: lakewood
-        });
-        var marker = new google.maps.Marker({
-          position: lakewood,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pAOzVVhIn_mQulSCBO354ZtacSk_ve0&callback=initMap">
-    </script>
+        <a class="slider-control left" href="#" data-jump="prev"><i class="fa fa-angle-left fa-2x"></i></a>
+        <a class="slider-control right" href="#" data-jump="next"><i class="fa fa-angle-right fa-2x"></i></a>
+        
+		
+    	</div>
+      <!-- Responsive slider - END -->
+	</div>
+		</section>
+		
+	
+	<!-- spacer section:testimonial -->
+		<section id="testimonials-3" class="section" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">				
+					<div class="col-lg-12">
+							<div class="align-center">
+										<div class="testimonial pad-top40 pad-bot40 clearfix">
+											<h5>
+												Here at Hidden-Gem Massage we aim to provide the best service in town. 
+												With our talented and experienced professionals, you are sure to feel
+												at home.
+											</h5>
+											<br/>
+											<span class="author">&mdash; Sanda Soto</span>
+										</div>
 
+								</div>
+							</div>
+					</div>
+				
+			</div>	
+		
+		</section>
+		
+		
+		<!-- spacer section:testimonial -->
+		<section id="testimonials" class="section" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">				
+					<div class="col-lg-12">
+							<div class="align-center">
+										<div class="testimonial pad-top40 pad-bot40 clearfix">
+											<h5>
+												Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+											</h5>
+											<br/>
+											<span class="author">&mdash; Jouse Manuel / www.jouse-manuel.com</span>
+										</div>
 
+								</div>
+							</div>
+					</div>
+				
+			</div>	
+		
+		</section>
+			
+		<!-- team -->
+		<section id="team" class="team-section appear clearfix">
+		<div class="container">
 
+				<div class="row mar-bot10">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+						<div class="wow bounceIn">
+						
+							<h2 class="section-heading animated" data-animation="bounceInUp">Our Team</h2>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+						
+						</div>
+						</div>
+					</div>
+				</div>
 
+					<div class="row align-center mar-bot45">
+						<div class="col-md-4">
+						<div class="wow bounceIn" data-animation-delay="4.8s">
+							<div class="team-member">
+								<div class="profile-picture">
+									<figure><img src="img/members3.jpg" alt=""></figure>
+									<div class="profile-overlay"></div>
+										<div class="profile-social">
+											<div class="icons-wrapper">
+												<a href="#"><i class="fa fa-facebook"></i></a>
+												<a href="#"><i class="fa fa-twitter"></i></a>
+												<a href="#"><i class="fa fa-linkedin"></i></a>
+												<a href="#"><i class="fa fa-pinterest"></i></a>
+												<a href="#"><i class="fa fa-google-plus"></i></a>
+											</div>
+										</div>
+								</div>
+								<div class="team-detail">
+									<h4>Ron Evgeniy</h4>
+									<span>User experiences</span>
+								</div>
+								<div class="team-bio">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fugiat, harum, adipisci accusantium minus asperiores.</p>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="col-md-4">
+							
+							<div class="wow bounceIn">
+							<div class="team-member">
+								<div class="profile-picture">
+									<figure><img src="img/members1.jpg" alt=""></figure>
+									<div class="profile-overlay"></div>
+										<div class="profile-social">
+											<div class="icons-wrapper">
+												<a href="#"><i class="fa fa-facebook"></i></a>
+												<a href="#"><i class="fa fa-twitter"></i></a>
+												<a href="#"><i class="fa fa-linkedin"></i></a>
+												<a href="#"><i class="fa fa-pinterest"></i></a>
+												<a href="#"><i class="fa fa-google-plus"></i></a>
+											</div>
+										</div>
+								</div>
+								<div class="team-detail">
+									<h4>Alexander Chernov</h4>
+									<span>Web developer</span>
+								</div>
+								<div class="team-bio">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fugiat, harum, adipisci accusantium minus asperiores.</p>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="wow bounceIn">
+							<div class="team-member">
+								<div class="profile-picture">
+									<figure><img src="img/members2.jpg" alt=""></figure>
+									<div class="profile-overlay"></div>
+										<div class="profile-social">
+											<div class="icons-wrapper">
+												<a href="#"><i class="fa fa-facebook"></i></a>
+												<a href="#"><i class="fa fa-twitter"></i></a>
+												<a href="#"><i class="fa fa-linkedin"></i></a>
+												<a href="#"><i class="fa fa-pinterest"></i></a>
+												<a href="#"><i class="fa fa-google-plus"></i></a>
+											</div>
+										</div>
+								</div>
+								<div class="team-detail">
+									<h4>Jose Manuel</h4>
+									<span>Web designer</span>
+								</div>
+								<div class="team-bio">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fugiat, harum, adipisci accusantium minus asperiores.</p>
+								</div>
+							</div>
+							</div>
+						</div>
+						
+					</div>
+						
+		</div>
+		</section>
+		<!-- /team -->
+		
+		<!-- spacer section:stats -->
+		<section id="parallax1" class="section pad-top40 pad-bot40 mar-bot20" data-stellar-background-ratio="0.5">
+			<div class="container ">
+            <div class="align-center pad-top40 pad-bot40">
+                <h4 class="color-white pad-top50">Indoctum accusamus comprehensam</h4>
+				<p class="color-white">Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Fusce dapibus, tellus ac cursus etiam porta sem malesuada magna mollis euismod. commodo, Faccibus mollis interdum. Morbi leo risus, porta ac, vestibulum at eros.Feugiat accumsan Suspendisse eget Duis faucibus tempus pede pede augue pede. Dapibus mollis
+								dignissim suscipit porta justo nisl amet Nunc quis semper.</p>
+            </div>
+			</div>	
+		</section>
+		
+		<!-- spacer section:testimonial -->
+		<section id="testimonials-2" class="section" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">				
+					<div class="col-lg-12">
+							<div class="align-center">
+										<div class="testimonial pad-top40 pad-bot40 clearfix">
+											<h5>
+												Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+											</h5>
+											<br/>
+											<span class="author">&mdash; Jouse Manuel / www.jouse-manuel.com</span>
+										</div>
 
-<!-- // Install the client from NPM -->
-<script>
+								</div>
+							</div>
+					</div>
+				
+			</div>	
+		
+		</section>
+		
+		<!-- section works -->
+		<section id="section-works" class="section appear clearfix">
+			<div class="container">
+				
+				<div class="row mar-bot40">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+							<h2 class="section-heading animated" data-animation="bounceInUp">Portfolio</h2>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+						</div>
+					</div>
+				</div>
+					
+                        <div class="row">
+                          <nav id="filter" class="col-md-12 text-center">
+                            <ul>
+                              <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
+                              <li><a href="#"  class="btn-theme btn-small" data-filter=".webdesign" >Web Design</a></li>
+                              <li><a href="#"  class="btn-theme btn-small" data-filter=".photography">Photography</a></li>
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">Print</a></li>
+                            </ul>
+                          </nav>
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="portfolio-items isotopeWrapper clearfix" id="3">
+							  
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+									<div class="wow rotateInUpLeft" data-animation-delay="4.8s">
+										<img src="img/portfolio/1.jpg" alt="welcome" />
+									</div>
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 1</a></h5>
+												<a href="img/portfolio/1.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
 
-// Require the client
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+									<div class="wow bounceIn">
+										<img src="img/portfolio/2.jpg" alt="" />
+									</div>
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 2</a></h5>
+												<a href="img/portfolio/2.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+								
 
-const Clarifai = require('clarifai');
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+									<div class="wow rotateInDownRight">
+										<img src="img/portfolio/3.jpg" alt="" />
+									</div>	
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 3</a></h5>
+												<a href="img/portfolio/3.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
 
-// initialize with your api key. This will also work in your browser via http://browserify.org/
+                                <article class="col-md-4 isotopeItem print">
+									<div class="portfolio-item">
+									<div class="wow rotateInUpLeft">
+										<img src="img/portfolio/4.jpg" alt="" />
+									 </div>	
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 4</a></h5>
+												<a href="img/portfolio/4.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
 
-const app = new Clarifai.App({
- apiKey: 'd5cd04aa2bf64eeab5199d4b2d0459c5'
-});
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+									<div class="wow bounceIn">
+										<img src="img/portfolio/5.jpg" alt="" />
+									</div>
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 5</a></h5>
+												<a href="img/portfolio/5.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
 
-var ourRequest = app.models.predict(Clarifai.GENERAL_MODEL, "https://samples.clarifai.com/metro-north.jpg").then(
-		  function(response) {
-		    console.log(ourRequest);
-		  },
-		  function(err) {
-		    // there was an error
-		  }
-		);
-</script>
-<!-- // You can also use the SDK by adding this script to your HTML: -->
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+									<div class="wow rotateInDownRight">
+										<img src="img/portfolio/6.jpg" alt="" />
+									 </div>		
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 6</a></h5>
+												<a href="img/portfolio/6.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
 
-<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-            <footer></footer>
-            </body>
-            
-            </html>
+                                <article class="col-md-4 isotopeItem print">
+									<div class="portfolio-item">
+									<div class="wow rotateInUpLeft">
+										<img src="img/portfolio/7.jpg" alt="" />
+									</div>
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 7</a></h5>
+												<a href="img/portfolio/7.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+									<div class="wow bounceIn">
+										<img src="img/portfolio/8.jpg" alt="" />
+									</div>	
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 8</a></h5>
+												<a href="img/portfolio/8.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem print">
+									<div class="portfolio-item">
+									<div class="wow rotateInDownRight">
+										<img src="img/portfolio/9.jpg" alt="" />
+									</div>
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Project name 9</a></h5>
+												<a href="img/portfolio/9.jpg" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+                                </div>
+                                        
+							</div>
+                                     
+
+							</div>
+                        </div>
+				
+			</div>
+		</section>
+		<section id="parallax2" class="section parallax" data-stellar-background-ratio="0.5">	
+            <div class="align-center pad-top40 pad-bot30">
+                <h4 class="color-white pad-top50">The middle of that asteroid field</h4>
+				<p class="color-white">We can repair any dings and scrapes to your spacecraft and support,Planning a time travel trip to the middle ages Feugiat accumsan Suspendisse eget Duis faucibus tempus pede pede augue pede.Dapibus mollis
+								dignissim suscipit porta justo nisl amet Nunc quis semper.</p>
+            </div>
+		</section>
+
+		<!-- contact -->
+		<section id="section-contact" class="section appear clearfix">
+			<div class="container">
+				
+				<div class="row mar-bot40">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+							<h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="cform" id="contact-form">
+							<div id="sendmessage">
+								 Your message has been sent. Thank you!
+							</div>
+							<form action="contact/contact.php" method="post" role="form" class="contactForm">
+							<div class="wow bounceIn">
+							  <div class="form-group">
+								<label for="name">Your Name</label>
+								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="email">Your Email</label>
+								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="subject">Subject</label>
+								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="message">Message</label>
+								<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+								<div class="validation"></div>
+							  </div>
+							</div>
+							  <button type="submit" class="line-btn green">SEND MESSAGE</button>
+							</form>
+
+						</div>
+					</div>
+					<!-- ./span12 -->
+				</div>
+				
+			</div>
+		</section>
+		<!-- map -->
+		<section id="section-map" class="clearfix">
+			<div id="map"></div>
+		</section>
+		
+	<section id="footer" class="section footer">
+		<div class="container">
+			<div class="row animated opacity mar-bot0" data-andown="fadeIn" data-animation="animation">
+				<div class="col-sm-12 align-center">
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>				
+				</div>
+			</div>
+
+			<div class="row align-center copyright">
+					<div class="col-sm-12"><p>Copyright &copy; 2014 GREEN - by <a href="http://bootstraptaste.com">Bootstrap Themes</a></p></div>
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Green
+                    -->
+			</div>
+		</div>
+
+	</section>
+	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+
+	<script src="js/greenJs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="js/greenJs/jquery.js"></script>
+	<script src="js/greenJs/jquery.easing.1.3.js"></script>
+    <script src="js/greenJs/bootstrap.min.js"></script>
+<!-- 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script> -->
+	<script src="js/greenJs/jquery.isotope.min.js"></script>
+	<script src="js/greenJs/jquery.nicescroll.min.js"></script>
+	<script src="js/greenJs/fancybox/jquery.fancybox.pack.js"></script>
+<!-- 	<script src="js/greenJs/jquery.parallax-1.1.3.js" type="text/javascript" ></script> -->
+	<script src="js/greenJs/skrollr.min.js"></script>		
+	<script src="js/greenJs/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="js/greenJs/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="js/greenJs/stellar.js"></script>
+	<script src="js/greenJs/responsive-slider.js"></script>
+	<script src="js/greenJs/jquery.appear.js"></script>
+	<script src="js/greenJs/validate.js"></script>
+	<script src="js/greenJs/grid.js"></script>
+    <script src="js/greenJs/main.js"></script>
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [	{		featureType:"all",		elementType:"all",		stylers:[		{			invert_lightness:true		},		{			saturation:10		},		{			lightness:30		},		{			gamma:0.5		},		{			hue:"#1C705B"		}		]	}	]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
+		 <script src="js/greenJs/wow.min.js"></script>
+	 <script>
+	 wow = new WOW(
+	 {
+	
+		}	) 
+		.init();
+	</script>
+	</body>
+</html>
